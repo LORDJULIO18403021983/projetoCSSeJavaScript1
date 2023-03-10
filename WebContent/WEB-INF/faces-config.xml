@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
+    version="1.2">
+    
+    <managed-bean>
+    	<managed-bean-name>filmeController</managed-bean-name>
+    	<managed-bean-class>br.com.orbit.serverfaces.backingbean.FilmeController</managed-bean-class>
+    	<managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+    <!-- Regras de Navegação Botão menu -->
+    <navigation-rule>
+    	<navigation-case>
+    		<from-action>#{filmeController.cadastrarMenu}</from-action>
+    		<to-view-id>/cadastrarFilme.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+    	<navigation-case>
+    		<from-action>#{filmeController.consultarMenu}</from-action>
+    		<to-view-id>/consultarFilme.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    <!-- Regras de Navegação Botão Cancelar -->
+    <navigation-rule>
+    	<from-view-id>/cadastrarFilme.jsp</from-view-id>
+    	<navigation-case>
+    		<from-outcome>cancelar</from-outcome>
+    		<to-view-id>/index.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+</faces-config>
