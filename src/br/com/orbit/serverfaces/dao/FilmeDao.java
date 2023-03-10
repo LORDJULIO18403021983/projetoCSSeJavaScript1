@@ -22,9 +22,9 @@ public class FilmeDao {
 
 		PreparedStatement pstm = conn.prepareStatement(sql);
 
-		pstm.setString(1, filme.getNome());
+		pstm.setString(1, filme.getNome().trim().toUpperCase());
 		pstm.setDouble(2, filme.getValor());
-		pstm.setString(3, filme.getGenero());
+		pstm.setString(3, filme.getGenero().toUpperCase().trim());
 		pstm.setString(4, filme.getDisponivel());
 
 		pstm.execute();

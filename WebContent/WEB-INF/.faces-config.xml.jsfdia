@@ -30,4 +30,32 @@
   PATH="/consultarFilme.jsp" SHAPE="240,145,0,0" model-entity="JSFProcessGroup"/>
  <PROCESS-ITEM NAME="rules:#index.jsp" PATH="/index.jsp"
   SHAPE="448,17,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::2" SHAPE="32,353,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::2" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{clienteController.cadastrarMenu}:#cadastrarCliente.jsp"
+    NAME="output" PATH="/cadastrarCliente.jsp"
+    TARGET="rules:#cadastrarCliente.jsp"
+    TITLE="#{clienteController.cadastrarMenu}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::3" SHAPE="32,241,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::3" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{clienteController.consultarMenu}:#consultarCliente.jsp"
+    NAME="output" PATH="/consultarCliente.jsp"
+    TARGET="rules:#consultarCliente.jsp"
+    TITLE="#{clienteController.consultarMenu}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#cadastrarCliente.jsp"
+  PATH="/cadastrarCliente.jsp" SHAPE="240,369,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#cadastrarCliente.jsp:0" NAME="item"
+   PATH="/cadastrarCliente.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="cancelar::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="cancelar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#consultarCliente.jsp"
+  PATH="/consultarCliente.jsp" SHAPE="240,481,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>
