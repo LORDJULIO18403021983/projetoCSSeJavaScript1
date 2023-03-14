@@ -6,13 +6,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Cadastro de Filme</title>
+<title>Alteração de Filme</title>
 </head>
 <body>
 	<f:view>
 		<jsp:include page="/menu.jsp"/>
 		<h:form>
-			<h1>Cadastro de Filme</h1>
+			<h1>Alteração de Filme</h1>
 			<a href="index.faces">Voltar</a><br>			
 			<a href="http://localhost:8080/ServerFaces/index.faces">Voltar2</a> 			
 			<h:panelGrid columns="1">
@@ -21,20 +21,20 @@
 			
 			<h:panelGrid columns="2">
 				<h:outputText value="* nome:"/>
-				<h:inputText value="#{filmeController.filme.nome}"maxlength="40"size="40" />
+				<h:inputText value="#{filmeController.filmeSelecionado.nome}"maxlength="40"size="40" />
 				
 				<h:outputText value="* valor:"/>
-				<h:inputText value="#{filmeController.filme.valor}"maxlength="8"size="15" />
+				<h:inputText value="#{filmeController.filmeSelecionado.valor}"maxlength="8"size="15" />
 				
 				<h:outputText value="* Gênero:"/>
-				<h:inputText value="#{filmeController.filme.genero}"maxlength="40"size="40" />
+				<h:inputText value="#{filmeController.filmeSelecionado.genero}"maxlength="40"size="40" />
 				
 				<h:outputText value="* Status:"/>			
-				<h:selectOneRadio value="#{filmeController.filme.status}">
+				<h:selectOneRadio value="#{filmeController.filmeSelecionado.status}">
 					<f:selectItems value="#{filmeController.listaStatusFilme}" />
 				</h:selectOneRadio>
 				
-				<h:commandButton action="#{filmeController.salvar}" value="Cadastrar" />
+				<h:commandButton action="#{filmeController.alterar}" value="Alterar" />
 				<h:commandButton action="#{filmeController.voltar}" value="Cancelar" />
 			</h:panelGrid>		
 		</h:form>

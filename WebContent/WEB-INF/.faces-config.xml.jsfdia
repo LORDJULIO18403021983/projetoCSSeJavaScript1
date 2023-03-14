@@ -27,7 +27,14 @@
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#consultarFilme.jsp"
-  PATH="/consultarFilme.jsp" SHAPE="240,145,0,0" model-entity="JSFProcessGroup"/>
+  PATH="/consultarFilme.jsp" SHAPE="240,145,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#consultarFilme.jsp:0" NAME="item"
+   PATH="/consultarFilme.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="redirectAlterar::#alterarFilme.jsp"
+    NAME="output" PATH="/alterarFilme.jsp"
+    TARGET="rules:#alterarFilme.jsp" TITLE="redirectAlterar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#index.jsp" PATH="/index.jsp"
   SHAPE="448,17,0,0" model-entity="JSFProcessGroup"/>
  <PROCESS-ITEM NAME="rules::2" SHAPE="32,353,0,0" model-entity="JSFProcessGroup">
@@ -58,4 +65,12 @@
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#consultarCliente.jsp"
   PATH="/consultarCliente.jsp" SHAPE="240,481,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#alterarFilme.jsp" PATH="/alterarFilme.jsp"
+  SHAPE="480,129,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#alterarFilme.jsp:0" NAME="item"
+   PATH="/alterarFilme.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="cancelar::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="cancelar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
 </PROCESS>

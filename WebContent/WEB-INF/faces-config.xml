@@ -55,12 +55,29 @@
     	</navigation-case>
     </navigation-rule>
     
-    <!-- Regras de Navegação Botão Cancelar do filme -->
+    <!-- Regras de Navegação para o alterar do filme -->  
+    <navigation-rule>
+    	<from-view-id>/consultarFilme.jsp</from-view-id>
+    	<navigation-case>
+    		<from-outcome>redirectAlterar</from-outcome>
+    		<to-view-id>/alterarFilme.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>  
+    <!-- Cancelar -->
+    <navigation-rule>
+    	<from-view-id>/alterarFilme.jsp</from-view-id>
+    	<navigation-case>
+    		<from-outcome>cancelar</from-outcome>
+    		<to-view-id>/index.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>    
+    
+    <!-- Regras de Navegação Botão Cancelar do cliente -->
     <navigation-rule>
     	<from-view-id>/cadastrarCliente.jsp</from-view-id>
     	<navigation-case>
     		<from-outcome>cancelar</from-outcome>
     		<to-view-id>/index.jsp</to-view-id>
     	</navigation-case>
-    </navigation-rule>    
+    </navigation-rule>  
 </faces-config>

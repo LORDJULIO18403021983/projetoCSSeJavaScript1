@@ -3,7 +3,7 @@ package br.com.orbit.serverfaces.bean;
 public class Filme {
 	private Integer codigo;
 	private String nome;
-	private String disponivel;
+	private Integer status;
 	private String genero;
 	private Double valor;
 
@@ -23,14 +23,6 @@ public class Filme {
 		this.nome = nome;
 	}
 
-	public String getDisponivel() {
-		return disponivel;
-	}
-
-	public void setDisponivel(String disponivel) {
-		this.disponivel = disponivel;
-	}
-
 	public String getGenero() {
 		return genero;
 	}
@@ -45,5 +37,13 @@ public class Filme {
 
 	public void setValor(Double valor) {
 		this.valor = valor;
+	}
+
+	public Integer getStatus() {
+		return status;
+	}
+
+	public void setStatus(Integer status) {
+		this.status = status;
 	}
 }
