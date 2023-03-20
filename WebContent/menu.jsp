@@ -21,18 +21,31 @@
 							<rich:menuItem id="menu2" value="Filme"
 								action="#{filmeController.cadastrarMenu}">
 							</rich:menuItem>						
+							<rich:menuItem id="menu3" value="Vendedor"
+								action="#{vendedorController.cadastrarMenu}">
+							</rich:menuItem>						
 					</rich:dropDownMenu>
 					<rich:dropDownMenu value="Consulta">
-							<rich:menuItem id="menu3" value="Cliente"
+							<rich:menuItem id="menu4" value="Cliente"
 								action="#{clienteController.consultarMenu}">
 							</rich:menuItem>
-							<rich:menuItem id="menu4" value="Filme"
+							<rich:menuItem id="menu5" value="Filme"
 								action="#{filmeController.consultarMenu}">
+							</rich:menuItem>
+					</rich:dropDownMenu>
+					<rich:dropDownMenu value="Imagens CSS">
+							<rich:menuItem id="menu6" value="Imagens css"
+								action="#">
+							</rich:menuItem>
+							<rich:menuItem id="menu7" value="Botões"
+								action="#">
 							</rich:menuItem>
 					</rich:dropDownMenu>
 				</rich:toolBar>
 			</h:form>
 		</f:subview>
 	</div>
+	<a href = "http://localhost:8080/ServerFaces/imagensCSS.html">Imagens CSS</a><br><br>
+	<a href = "http://localhost:8080/ServerFaces/botao.html">Botão CSS</a><br><br>
 </body>
 </html>
