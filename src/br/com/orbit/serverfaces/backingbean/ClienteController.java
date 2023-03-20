@@ -13,13 +13,16 @@ import br.com.orbit.serverfaces.util.JSFUtil;
 public class ClienteController {
 	private Cliente cliente = new Cliente();
 	private List<Cliente> listaCliente;
+	private Cliente clienteSelecionado = new Cliente();
 
-	public String cadastrarMenu() {
-		return "";
+	public void limpar() {
+		cliente = new Cliente();
+		clienteSelecionado = new Cliente();
+		listaCliente = new ArrayList<Cliente>();
 	}
 
-	public String consultarMenu() {
-		return "";
+	public String clienteAlterar() {
+		return "redirectAlterar";
 	}
 
 	public String salvar() {
@@ -49,6 +52,45 @@ public class ClienteController {
 		return "";
 	}
 
+	public String alterar() {
+		Connection conn = ConnectionFactory.getConnection();
+		ClienteDao clienteDao = new ClienteDao(conn);
+		try {
+			clienteDao.alterar(clienteSelecionado);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		JSFUtil.addInfoMessage("Cliente: " + clienteSelecionado.getNome() + " Alterado com sucesso!");
+		System.out.println(clienteSelecionado.getNome());
+		cliente = new Cliente();
+		return "";
+	}
+
+	public String clienteExcluir() {
+		Connection conn = ConnectionFactory.getConnection();
+		ClienteDao clienteDao = new ClienteDao(conn);
+		try {
+			clienteDao.excluir(clienteSelecionado);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		JSFUtil.addInfoMessage("Cliente: " + clienteSelecionado.getNome() + " Excluido com sucesso!");
+		listaCliente.remove(getClienteSelecionado());
+		System.out.println(clienteSelecionado.getNome());
+		cliente = new Cliente();
+		return "";
+	}
+
+	public String cadastrarMenu() {
+		limpar();
+		return "";
+	}
+
+	public String consultarMenu() {
+		limpar();
+		return "";
+	}
+
 	public String voltar() {
 		return "cancelar";
 	}
@@ -69,4 +111,11 @@ public class ClienteController {
 		this.listaCliente = listaCliente;
 	}
 
+	public Cliente getClienteSelecionado() {
+		return clienteSelecionado;
+	}
+
+	public void setClienteSelecionado(Cliente clienteSelecionado) {
+		this.clienteSelecionado = clienteSelecionado;
+	}
 }

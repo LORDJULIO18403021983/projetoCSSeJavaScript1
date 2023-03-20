@@ -70,6 +70,23 @@
     		<from-outcome>cancelar</from-outcome>
     		<to-view-id>/index.jsp</to-view-id>
     	</navigation-case>
+    </navigation-rule> 
+       
+    <!-- Regras de Navegação para o alterar do cliente -->  
+    <navigation-rule>
+    	<from-view-id>/consultarCliente.jsp</from-view-id>
+    	<navigation-case>
+    		<from-outcome>redirectAlterar</from-outcome>
+    		<to-view-id>/alterarCliente.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>  
+    <!-- Cancelar -->
+    <navigation-rule>
+    	<from-view-id>/alterarCliente.jsp</from-view-id>
+    	<navigation-case>
+    		<from-outcome>cancelar</from-outcome>
+    		<to-view-id>/index.jsp</to-view-id>
+    	</navigation-case>
     </navigation-rule>    
     
     <!-- Regras de Navegação Botão Cancelar do cliente -->

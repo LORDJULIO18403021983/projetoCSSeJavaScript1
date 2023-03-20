@@ -52,4 +52,42 @@ public class ClienteDao {
 		}
 		return clientes;
 	}
+
+	// DADOS ORDENADOS PELO NOME.
+	public void consultar(Cliente cliente) throws SQLException {
+		String sql = "select * from cliente order by nome";
+		PreparedStatement pstm = conn.prepareStatement(sql);
+		ResultSet cursor = pstm.executeQuery();
+		while (cursor.next()) {
+			// AS DUAS MANEIRAS SÂO ACEITADAS.
+			// System.out.println(cursor.getString(1));
+			System.out.println(cursor.getString("nome"));
+		}
+	}
+
+	// ALTERAR.
+	public void alterar(Cliente cliente) throws SQLException {
+
+		String sql = "update cliente set estado =?, cidade = ?, endereco = ?, idade = ?, nome = ?  where codigo=?";
+		PreparedStatement pstm = conn.prepareStatement(sql);
+
+		pstm.setString(1, cliente.getEstado().trim().toUpperCase());
+		pstm.setString(2, cliente.getCidade().trim().toUpperCase());
+		pstm.setString(3, cliente.getEndereco().trim().toUpperCase());
+		pstm.setInt(4, cliente.getIdade());
+		pstm.setString(5, cliente.getNome().trim().toUpperCase());
+		pstm.setInt(6, cliente.getCodigo());
+
+		pstm.execute();
+	}
+
+	// EXCLUIR.
+	public void excluir(Cliente cliente) throws SQLException {
+
+		String sql = "delete from cliente where nome = ?";
+		PreparedStatement pstm = conn.prepareStatement(sql);
+
+		pstm.setString(1, cliente.getNome());
+		pstm.execute();
+	}
 }
