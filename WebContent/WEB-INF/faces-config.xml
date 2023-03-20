@@ -11,6 +11,11 @@
     	<managed-bean-class>br.com.orbit.serverfaces.backingbean.FilmeController</managed-bean-class>
     	<managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
+    <managed-bean>
+    	<managed-bean-name>vendedorController</managed-bean-name>
+    	<managed-bean-class>br.com.orbit.serverfaces.backingbean.VendedorController</managed-bean-class>
+    	<managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
     
     <managed-bean>
     	<managed-bean-name>clienteController</managed-bean-name>
@@ -43,6 +48,20 @@
     	<navigation-case>
     		<from-action>#{clienteController.consultarMenu}</from-action>
     		<to-view-id>/consultarCliente.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    
+    <!-- Regras de Navegação Botão menu de vendedor -->
+    <navigation-rule>
+    	<navigation-case>
+    		<from-action>#{vendedorController.cadastrarMenu}</from-action>
+    		<to-view-id>/cadastrarVendedor.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule>    
+    <navigation-rule>
+    	<navigation-case>
+    		<from-action>#{vendedorController.consultarMenu}</from-action>
+    		<to-view-id>/consultarVendedor.jsp</to-view-id>
     	</navigation-case>
     </navigation-rule>
     
@@ -97,4 +116,14 @@
     		<to-view-id>/index.jsp</to-view-id>
     	</navigation-case>
     </navigation-rule>  
+    
+    <!-- Regras de Navegação Botão Cancelar do vendedor -->
+    <navigation-rule>
+    	<from-view-id>/cadastrarVendedor.jsp</from-view-id>
+    	<navigation-case>
+    		<from-outcome>cancelar</from-outcome>
+    		<to-view-id>/index.jsp</to-view-id>
+    	</navigation-case>
+    </navigation-rule> 
+     
 </faces-config>

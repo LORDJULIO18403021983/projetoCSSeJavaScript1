@@ -88,4 +88,32 @@
     PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="cancelar" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::4" SHAPE="32,465,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::4" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{vendedorController.cadastrarMenu}:#cadastrarVendedor.jsp"
+    NAME="output" PATH="/cadastrarVendedor.jsp"
+    TARGET="rules:#cadastrarVendedor.jsp"
+    TITLE="#{vendedorController.cadastrarMenu}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::5" SHAPE="32,689,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::5" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{vendedorController.consultarMenu}:#consultarVendedor.jsp"
+    NAME="output" PATH="/consultarVendedor.jsp"
+    TARGET="rules:#consultarVendedor.jsp"
+    TITLE="#{vendedorController.consultarMenu}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#cadastrarVendedor.jsp"
+  PATH="/cadastrarVendedor.jsp" SHAPE="240,593,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#cadastrarVendedor.jsp:0" NAME="item"
+   PATH="/cadastrarVendedor.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="cancelar::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="cancelar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#consultarVendedor.jsp"
+  PATH="/consultarVendedor.jsp" SHAPE="240,705,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>
