@@ -15,11 +15,31 @@
 			numero=objeto.value.replace(padrao,"");
 			objeto.value=numero;
 			}
-	</script>
 
+		function masc_cep(objeto){
+			var retorno="";
+			var numero;
+			var padrao=/\D/g;
+
+			numero=objeto.value.replace(padrao,"");
+
+			parte1=numero.substr(0,2);
+			if(parte1.length>0)
+				retorno=parte1;
+
+			parte2=numero.substr(2,3);
+			if(parte2.length>0)
+				retorno+="." + parte2;
+
+			parte3=numero.substr(5,3);
+			if(parte3.length>0)
+				retorno+="-" + parte3;
+
+			objeto.value=retorno;			
+			}
+	</script>
 </head>
 <body>
-
 	<f:view>
 		<jsp:include page="/menu.jsp"/>
 		<h:form>
@@ -40,11 +60,11 @@
 				
 				
 				<h:outputText value="* cep"/>
-				<h:inputText value="#{vendedorController.vendedor.cep}"maxlength="8"size="40" onkeyup="masc_salario(this);">
+				<h:inputText value="#{vendedorController.vendedor.cep}"maxlength="10"size="40" onkeyup="masc_cep(this);">
 				</h:inputText>
 				
 				<h:outputText value="* cpf"/>
-				<h:inputText value="#{vendedorController.vendedor.cpf}"maxlength="11"size="20" onkeyup="masc_salario(this);">
+				<h:inputText value="#{vendedorController.vendedor.cpf}"maxlength="15"size="20" onkeyup="masc_salario(this);">
 				</h:inputText>
 			
 				
@@ -52,7 +72,6 @@
 				<h:commandButton action="#{vendedorController.voltar}" value="Cancelar" />
 			</h:panelGrid>		
 		</h:form>
-	</f:view>
-	
+	</f:view>	
 </body>
 </html>

@@ -5,11 +5,17 @@ import br.com.orbit.serverfaces.bean.Vendedor;
 public class VendedorController {
 	private Vendedor vendedor = new Vendedor();
 	
+	public void limpar() {
+		vendedor = new Vendedor();
+	}
+	
 	public String salvar() {
+		limpar();
 		return "";
 	}
 	
 	public String cadastrarMenu() {
+		limpar();
 		return "";
 	}
 	

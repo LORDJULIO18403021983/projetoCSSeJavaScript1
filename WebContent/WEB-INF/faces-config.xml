@@ -58,12 +58,7 @@
     		<to-view-id>/cadastrarVendedor.jsp</to-view-id>
     	</navigation-case>
     </navigation-rule>    
-    <navigation-rule>
-    	<navigation-case>
-    		<from-action>#{vendedorController.consultarMenu}</from-action>
-    		<to-view-id>/consultarVendedor.jsp</to-view-id>
-    	</navigation-case>
-    </navigation-rule>
+    
     
     <!-- Regras de Navegação Botão Cancelar do filme -->
     <navigation-rule>
