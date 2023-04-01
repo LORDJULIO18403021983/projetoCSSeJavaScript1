@@ -37,6 +37,32 @@
 
 			objeto.value=retorno;			
 			}
+		
+		function masc_cpf(objeto){
+			var retorno="";
+			var numero;
+			var padrao=/\D/g;
+
+			numero=objeto.value.replace(padrao,"");
+
+			parte1=numero.substr(0,3);
+			if(parte1.length>0)
+				retorno=parte1;
+
+			parte2=numero.substr(3,3);
+			if(parte2.length>0)
+				retorno+="." + parte2;
+
+			parte3=numero.substr(6,3);
+			if(parte3.length>0)
+				retorno+="." + parte3
+				;
+			parte4=numero.substr(9,2);
+			if(parte4.length>0)
+				retorno+="-" + parte4;
+
+			objeto.value=retorno;			
+			}
 	</script>
 </head>
 <body>
@@ -64,7 +90,7 @@
 				</h:inputText>
 				
 				<h:outputText value="* cpf"/>
-				<h:inputText value="#{vendedorController.vendedor.cpf}"maxlength="15"size="20" onkeyup="masc_salario(this);">
+				<h:inputText value="#{vendedorController.vendedor.cpf}"maxlength="15"size="20" onkeyup="masc_cpf(this);">
 				</h:inputText>
 			
 				
