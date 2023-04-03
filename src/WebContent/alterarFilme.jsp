@@ -5,17 +5,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Alteração de Filme</title>
+    <meta charset="ISO-8859-1">
+    <title>Alteração de Filme</title>
 </head>
 <body>
-	<f:view>
-		<jsp:include page="/menu.jsp"/>
+<f:view>
+    <jsp:include page="/WebContent/menu.jsp"/>
 		<h:form>
-			<h1>Alteração de Filme</h1>
-			<a href="index.faces">Voltar</a><br>			
-			<a href="http://localhost:8080/ServerFaces/index.faces">Voltar2</a> 			
-			<h:panelGrid columns="1">
+            <h1>Alteração de Filme</h1>
+            <a href="index.faces">Voltar</a><br>
+            <a href="http://localhost:8080/ServerFaces/index.faces">Voltar2</a>
+            <h:panelGrid columns="1">
 				<h:messages />
 			</h:panelGrid>
 			
@@ -25,8 +25,8 @@
 				
 				<h:outputText value="* valor:"/>
 				<h:inputText value="#{filmeController.filmeSelecionado.valor}"maxlength="8"size="15" />
-				
-				<h:outputText value="* Gênero:"/>
+
+                <h:outputText value="* Gênero:"/>
 				<h:inputText value="#{filmeController.filmeSelecionado.genero}"maxlength="40"size="40" />
 				
 				<h:outputText value="* Status:"/>			

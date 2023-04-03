@@ -67,7 +67,7 @@
 </head>
 <body>
 	<f:view>
-		<jsp:include page="/menu.jsp"/>
+		<jsp:include page="/WebContent/menu.jsp"/>
 		<h:form>
 			<h1>Cadastro de Vendedor</h1>
 			<a href="index.faces">Voltar</a><br>			

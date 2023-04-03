@@ -4,27 +4,25 @@
 <%@taglib prefix="h" uri="http://java.sun.com/jsf/html"%>
 <%@taglib prefix="rich" uri="http://richfaces.org/rich"%>
 <%@taglib prefix="a4j" uri="http://richfaces.org/a4j"%>
-<%@ page import="java.sql.*, java.util.*, br.com.orbit.serverfaces.dao.*,
-br.com.orbit.serverfaces.backingbean.*,br.com.orbit.serverfaces.bean.*,br.com.orbit.serverfaces.util.*" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Consulta Cliente</title>
+	<meta charset="ISO-8859-1">
+	<title>Consulta Cliente</title>
 </head>
 <body>
-	<f:view>
-		<jsp:include page="/menu.jsp" />
-		<h:form>
-			<h1>Consulta de Cliente</h1>
-			
-			<h:panelGrid columns="1">
-				<h:messages />
-			</h:panelGrid>
-			
-			<h:panelGrid columns="2">
-				<h:outputText value="Nome" />
-				<h:inputText value="#{clienteController.cliente.nome}" maxlength="45" size="40" />
+<f:view>
+	<jsp:include page="/WebContent/menu.jsp"/>
+	<h:form>
+		<h1>Consulta de Cliente</h1>
+
+		<h:panelGrid columns="1">
+			<h:messages/>
+		</h:panelGrid>
+
+		<h:panelGrid columns="2">
+			<h:outputText value="Nome"/>
+			<h:inputText value="#{clienteController.cliente.nome}" maxlength="45" size="40"/>
 			</h:panelGrid>
 			
 			<h:panelGrid columns="1">
@@ -40,7 +38,7 @@ br.com.orbit.serverfaces.backingbean.*,br.com.orbit.serverfaces.bean.*,br.com.or
 				<f:facet name="header">
 					<rich:columnGroup>
 						<rich:column>
-							<h:outputText value="Código" />
+							<h:outputText value="Código"/>
 						</rich:column>
 						<rich:column>
 							<h:outputText value="Nome" />
@@ -58,7 +56,7 @@ br.com.orbit.serverfaces.backingbean.*,br.com.orbit.serverfaces.bean.*,br.com.or
 							<h:outputText value="Estado" />
 						</rich:column>
 						<rich:column colspan="2">
-							<h:outputText value="Ações" />
+							<h:outputText value="Ações"/>
 						</rich:column>
 					</rich:columnGroup>
 				</f:facet>
@@ -118,7 +116,7 @@ br.com.orbit.serverfaces.backingbean.*,br.com.orbit.serverfaces.bean.*,br.com.or
 						reRender="listaCliente">
 					</a4j:commandButton>
 					<a4j:commandButton value="Não" action="#"
-						onclick="Richfaces.hideModalPanel('modalExcluirCliente')">
+									   onclick="Richfaces.hideModalPanel('modalExcluirCliente')">
 					</a4j:commandButton>
 				</h:panelGrid>
 			</a4j:form>

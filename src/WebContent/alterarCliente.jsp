@@ -5,17 +5,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Alteração de Cliente</title>
+    <meta charset="ISO-8859-1">
+    <title>Alteração de Cliente</title>
 </head>
 <body>
-	<f:view>
-		<jsp:include page="/menu.jsp"/>
+<f:view>
+    <jsp:include page="/WebContent/menu.jsp"/>
 		<h:form>
-			<h1>Alteração de Cliente</h1>
-			<a href="index.faces">Voltar</a><br>			
-			<a href="http://localhost:8080/ServerFaces/index.faces">Voltar</a>			
-			<h:panelGrid columns="1">
+            <h1>Alteração de Cliente</h1>
+            <a href="index.faces">Voltar</a><br>
+            <a href="http://localhost:8080/ServerFaces/index.faces">Voltar</a>
+            <h:panelGrid columns="1">
 				<h:messages />
 			</h:panelGrid>
 			

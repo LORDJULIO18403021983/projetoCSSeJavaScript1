@@ -38,14 +38,14 @@
 								action="#">
 							</rich:menuItem>
 							<rich:menuItem id="menu7" value="Botões"
-								action="#">
-							</rich:menuItem>
+                                           action="#">
+                            </rich:menuItem>
 					</rich:dropDownMenu>
 				</rich:toolBar>
 			</h:form>
 		</f:subview>
-	</div>
-	<a href = "http://localhost:8080/ServerFaces/imagensCSS.html">Imagens CSS</a><br><br>
-	<a href = "http://localhost:8080/ServerFaces/botao.html">Botão CSS</a><br><br>
+    </div>
+    <a href="http://localhost:8080/ServerFaces/imagensCSS.html">Imagens CSS</a><br><br>
+    <a href="http://localhost:8080/ServerFaces/botao.html">Botão CSS</a><br><br>
 </body>
 </html>

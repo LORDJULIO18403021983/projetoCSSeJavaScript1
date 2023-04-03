@@ -27,13 +27,13 @@
     <navigation-rule>
     	<navigation-case>
     		<from-action>#{filmeController.cadastrarMenu}</from-action>
-    		<to-view-id>/cadastrarFilme.jsp</to-view-id>
+    		<to-view-id>/WebContent/cadastrarFilme.jsp</to-view-id>
     	</navigation-case>
     </navigation-rule>    
     <navigation-rule>
     	<navigation-case>
     		<from-action>#{filmeController.consultarMenu}</from-action>
-    		<to-view-id>/consultarFilme.jsp</to-view-id>
+            <to-view-id>/WebContent/consultarFilme.jsp</to-view-id>
     	</navigation-case>
     </navigation-rule>
     
@@ -41,13 +41,13 @@
     <navigation-rule>
     	<navigation-case>
     		<from-action>#{clienteController.cadastrarMenu}</from-action>
-    		<to-view-id>/cadastrarCliente.jsp</to-view-id>
+            <to-view-id>/WebContent/cadastrarCliente.jsp</to-view-id>
     	</navigation-case>
     </navigation-rule>    
     <navigation-rule>
     	<navigation-case>
     		<from-action>#{clienteController.consultarMenu}</from-action>
-    		<to-view-id>/consultarCliente.jsp</to-view-id>
+            <to-view-id>/WebContent/consultarCliente.jsp</to-view-id>
     	</navigation-case>
     </navigation-rule>
     
@@ -55,69 +55,69 @@
     <navigation-rule>
     	<navigation-case>
     		<from-action>#{vendedorController.cadastrarMenu}</from-action>
-    		<to-view-id>/cadastrarVendedor.jsp</to-view-id>
+            <to-view-id>/WebContent/cadastrarVendedor.jsp</to-view-id>
     	</navigation-case>
     </navigation-rule>    
     
     
     <!-- Regras de Navegação Botão Cancelar do filme -->
     <navigation-rule>
-    	<from-view-id>/cadastrarFilme.jsp</from-view-id>
+        <from-view-id>/WebContent/cadastrarFilme.jsp</from-view-id>
     	<navigation-case>
     		<from-outcome>cancelar</from-outcome>
-    		<to-view-id>/index.jsp</to-view-id>
+            <to-view-id>/WebContent/index.jsp</to-view-id>
     	</navigation-case>
     </navigation-rule>
     
     <!-- Regras de Navegação para o alterar do filme -->  
     <navigation-rule>
-    	<from-view-id>/consultarFilme.jsp</from-view-id>
+        <from-view-id>/WebContent/consultarFilme.jsp</from-view-id>
     	<navigation-case>
     		<from-outcome>redirectAlterar</from-outcome>
-    		<to-view-id>/alterarFilme.jsp</to-view-id>
+            <to-view-id>/WebContent/alterarFilme.jsp</to-view-id>
     	</navigation-case>
     </navigation-rule>  
     <!-- Cancelar -->
     <navigation-rule>
-    	<from-view-id>/alterarFilme.jsp</from-view-id>
+        <from-view-id>/WebContent/alterarFilme.jsp</from-view-id>
     	<navigation-case>
     		<from-outcome>cancelar</from-outcome>
-    		<to-view-id>/index.jsp</to-view-id>
+            <to-view-id>/WebContent/index.jsp</to-view-id>
     	</navigation-case>
     </navigation-rule> 
        
     <!-- Regras de Navegação para o alterar do cliente -->  
     <navigation-rule>
-    	<from-view-id>/consultarCliente.jsp</from-view-id>
+        <from-view-id>/WebContent/consultarCliente.jsp</from-view-id>
     	<navigation-case>
     		<from-outcome>redirectAlterar</from-outcome>
-    		<to-view-id>/alterarCliente.jsp</to-view-id>
+            <to-view-id>/WebContent/alterarCliente.jsp</to-view-id>
     	</navigation-case>
     </navigation-rule>  
     <!-- Cancelar -->
     <navigation-rule>
-    	<from-view-id>/alterarCliente.jsp</from-view-id>
+        <from-view-id>/WebContent/alterarCliente.jsp</from-view-id>
     	<navigation-case>
     		<from-outcome>cancelar</from-outcome>
-    		<to-view-id>/index.jsp</to-view-id>
+            <to-view-id>/WebContent/index.jsp</to-view-id>
     	</navigation-case>
     </navigation-rule>    
     
     <!-- Regras de Navegação Botão Cancelar do cliente -->
     <navigation-rule>
-    	<from-view-id>/cadastrarCliente.jsp</from-view-id>
+        <from-view-id>/WebContent/cadastrarCliente.jsp</from-view-id>
     	<navigation-case>
     		<from-outcome>cancelar</from-outcome>
-    		<to-view-id>/index.jsp</to-view-id>
+            <to-view-id>/WebContent/index.jsp</to-view-id>
     	</navigation-case>
     </navigation-rule>  
     
     <!-- Regras de Navegação Botão Cancelar do vendedor -->
     <navigation-rule>
-    	<from-view-id>/cadastrarVendedor.jsp</from-view-id>
+        <from-view-id>/WebContent/cadastrarVendedor.jsp</from-view-id>
     	<navigation-case>
     		<from-outcome>cancelar</from-outcome>
-    		<to-view-id>/index.jsp</to-view-id>
+            <to-view-id>/WebContent/index.jsp</to-view-id>
     	</navigation-case>
     </navigation-rule> 
      

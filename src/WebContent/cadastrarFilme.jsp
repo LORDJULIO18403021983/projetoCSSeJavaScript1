@@ -10,7 +10,7 @@
 </head>
 <body>
 	<f:view>
-		<jsp:include page="/menu.jsp"/>
+		<jsp:include page="/WebContent/menu.jsp"/>
 		<h:form>
 			<h1>Cadastro de Filme</h1>
 			<a href="index.faces">Voltar</a><br>			
@@ -25,8 +25,8 @@
 				
 				<h:outputText value="* valor:"/>
 				<h:inputText value="#{filmeController.filme.valor}"maxlength="8"size="15" />
-				
-				<h:outputText value="* Gênero:"/>
+
+                <h:outputText value="* Gênero:"/>
 				<h:inputText value="#{filmeController.filme.genero}"maxlength="40"size="40" />
 				
 				<h:outputText value="* Status:"/>			
