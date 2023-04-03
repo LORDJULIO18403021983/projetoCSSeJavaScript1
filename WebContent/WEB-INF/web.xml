@@ -37,6 +37,6 @@
 
 	<context-param>
 		<param-name>org.richfaces.SKIN</param-name>
-		<param-value>blueSky</param-value>
+		<param-value>wine</param-value>
 	</context-param>
 </web-app>
