@@ -7,6 +7,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Cadastro de Vendedor</title>
+<link rel="stylesheet" href="CSS2/estilo2.css">
 	<script type="text/javascript">
 		function masc_salario(objeto){
 			var numero="";
