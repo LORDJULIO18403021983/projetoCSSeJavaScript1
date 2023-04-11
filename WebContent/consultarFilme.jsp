@@ -11,7 +11,6 @@ br.com.orbit.serverfaces.backingbean.*,br.com.orbit.serverfaces.bean.*,br.com.or
 <head>
 <meta charset="ISO-8859-1">
 <title>Consulta Filme</title>
-<link rel="stylesheet" href="CSS2/estilo2.css">
 </head>
 <body>
 	<f:view>

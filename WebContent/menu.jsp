@@ -8,7 +8,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Server Faces</title>
-<link rel="stylesheet" href="CSS2/estilo2.css">
 </head>
 <body>
 	<div>

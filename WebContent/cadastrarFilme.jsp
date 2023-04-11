@@ -7,7 +7,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Cadastro de Filme</title>
-<link rel="stylesheet" href="CSS2/estilo2.css">
 </head>
 <body>
 	<f:view>
